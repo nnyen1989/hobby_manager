@@ -1,0 +1,30 @@
+%h1 List of Movie
+= link_to('New', new_movie_path)
+%table
+  %tr
+    %td
+      Name Movie
+    %td
+      Category
+    %td
+      Manufacture
+    %td
+      Actor
+    %td
+      Edit
+    %td
+      Delete
+  - @movies.each do |movie|
+    %tr
+      %td
+        = movie.name_movie
+      %td
+        = movie.category
+      %td
+        = movie.manufacture
+      %td
+        = movie.actor.name_actor
+      %td
+        = link_to('Edit', edit_movie_path(movie.id))
+      %td
+        = link_to('Delete', movie_path(movie.id), method: 'delete')

@@ -1,0 +1,22 @@
+= form_for(@movie, url: movie_path, method: 'patch') do |f|
+  %table
+    %tr
+      %td
+        Movie Name
+      %td
+        = f.text_field :name_movie
+    %tr
+      %td
+        Category
+      %td
+        = f.text_field :category
+    %tr
+      %td
+        Manufacture
+      %td
+        = f.text_field :manufacture
+    %tr
+      %td{colspan: 2}
+        = f.submit :Edit
+
+

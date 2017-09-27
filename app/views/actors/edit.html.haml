@@ -1,0 +1,22 @@
+= form_for(@actor, url: actor_path, method: 'patch') do |f|
+  %table
+    %tr
+      %td
+        Actor Name
+      %td
+        = f.text_field :name_actor
+    %tr
+      %td
+        Birth Day
+      %td
+        = f.text_field :birth_day
+    %tr
+      %td
+        Coutry
+      %td
+        = f.text_field :country
+    %tr
+      %td{colspan: 2}
+        = f.submit :Edit
+
+

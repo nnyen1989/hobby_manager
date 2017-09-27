@@ -1,0 +1,27 @@
+= form_for(@movie, url: movies_path, method: 'post') do |f|
+  %table
+    %tr
+      %td
+        Movie Name
+      %td
+        = f.text_field :name_movie
+    %tr
+      %td
+        Category
+      %td
+        = f.text_field :category
+    %tr
+      %td
+        Manufacture
+      %td
+        = f.text_field :manufacture
+    %tr
+      %td
+        Actor
+      %td
+        = f.collection_select :actor_id, Actor.all, :id, :name_actor, prompt: true
+    %tr
+      %td{colspan: 2}
+        = f.submit :Create
+
+

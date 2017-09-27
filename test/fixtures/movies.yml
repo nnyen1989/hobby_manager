@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_movie: MyString
+  category: MyString
+  manufacture: MyString
+  actor: one
+
+two:
+  name_movie: MyString
+  category: MyString
+  manufacture: MyString
+  actor: two

@@ -1,0 +1,26 @@
+%h1 List of Actor
+= link_to('New', new_actor_path)
+%table
+  %tr
+    %td
+      Name Actor
+    %td
+      Birth Day
+    %td
+      Country
+    %td
+      Edit
+    %td
+      Delete
+  - @actors.each do |actor|
+    %tr
+      %td
+        = actor.name_actor
+      %td
+        = actor.birth_day
+      %td
+        = actor.country
+      %td
+        = link_to('Edit', edit_actor_path(actor.id))
+      %td
+        = link_to('Delete', actor_path(actor.id), method: 'delete')
