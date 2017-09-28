@@ -39,7 +39,7 @@ class ActorsController < ApplicationController
   private
 
   def actor_params
-    params.require(:actor).permit(:name_actor, :birth_day, :country)
+    params.require(:actor).permit(:name_actor, :birth_day, :country, :avatar)
   end
 
 end

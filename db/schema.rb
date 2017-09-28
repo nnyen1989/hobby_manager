@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170915025731) do
+ActiveRecord::Schema.define(version: 20170928061727) do
 
   create_table "actors", force: :cascade do |t|
     t.string "name_actor"
@@ -18,16 +18,10 @@ ActiveRecord::Schema.define(version: 20170915025731) do
     t.string "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
   end
 
-  create_table "movies", force: :cascade do |t|
-    t.string "name_movie"
-    t.string "category"
-    t.string "manufacture"
-    t.integer "actor_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["actor_id"], name: "index_movies_on_actor_id"
-  end
+# Could not dump table "movies" because of following StandardError
+#   Unknown type 'json' for column 'covers'
 
 end

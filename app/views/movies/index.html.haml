@@ -5,6 +5,8 @@
     %td
       Name Movie
     %td
+      Movie Covers
+    %td
       Category
     %td
       Manufacture
@@ -18,6 +20,9 @@
     %tr
       %td
         = movie.name_movie
+      %td
+        - movie.covers.each do |cover|
+          = image_tag cover.thumb
       %td
         = movie.category
       %td

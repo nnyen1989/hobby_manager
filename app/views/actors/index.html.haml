@@ -3,6 +3,8 @@
 %table
   %tr
     %td
+      Image
+    %td
       Name Actor
     %td
       Birth Day
@@ -14,6 +16,8 @@
       Delete
   - @actors.each do |actor|
     %tr
+      %td
+        = image_tag actor.avatar.thumb
       %td
         = actor.name_actor
       %td

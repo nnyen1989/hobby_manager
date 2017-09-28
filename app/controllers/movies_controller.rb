@@ -24,7 +24,7 @@ class MoviesController < ApplicationController
   def update
     @movie = Movie.find(params[:id])
     if @movie.update(movie_params)
-      redirect_to @movie
+      redirect_to movies_path
     else
       render 'update'
     end
@@ -38,6 +38,6 @@ class MoviesController < ApplicationController
   private
 
   def movie_params
-    params.require(:movie).permit(:name_movie, :category, :manufacture, :actor_id)
+    params.require(:movie).permit(:name_movie, :category, :manufacture, :actor_id, {covers: []})
   end
 end
